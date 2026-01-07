@@ -15,11 +15,9 @@ def show():
     # --- Step 1: 機場到名古屋 (電車) ---
     st.subheader("1️⃣ 機場 ➔ 名鐵名古屋站")
     
-    # [修正] 紅色提醒：加入 Highwaybus 連結
     st.warning("⚠️ 重要提醒：確認車次後，巴士 **發車前 30 分鐘** 付款取票！[巴士付款頁面](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected)")
     st.info("💡 搭乘 **名鐵電車 (Meitetsu Line)** 前往市區")
     
-    # [修正] 時刻表：加入名鐵官網連結與現金提醒
     with st.expander("🚆 點我看：名鐵電車時刻表 (16:00-18:00)", expanded=False):
         st.markdown("機器買只能用現金，建議搭乘 μ-Sky (+450円)  [官網時刻表](https://trainbus.meitetsu.co.jp/meitetsu-transfer-zh-tw/pc/transfer/DepArrTimeList?snode=00009406&gnode=00004372&date=2026-01-17&depTime=16)")
         
@@ -49,7 +47,6 @@ def show():
     # --- Step 2: 轉乘與購物 ---
     st.subheader("2️⃣ 轉乘：名鐵巴士中心")
     
-    # [修正] 這裡也補上 Highwaybus 連結
     st.markdown("🔗 [巴士預約付款頁面](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected)")
 
     st.markdown("""
@@ -70,11 +67,18 @@ def show():
     
     # --- Step 4: 住宿資訊 ---
     st.divider()
-    # [修正] 標題改為飯店名稱
-    st.subheader("🏨 金澤站西口大和Roynet飯店")
+
+    # [修改重點] 使用 columns 將標題與按鈕並排
+    # [3, 1] 代表左邊佔 3 等份(標題)，右邊佔 1 等份(按鈕)
+    col_title, col_btn = st.columns([3, 1])
     
-    # [修正] 導航按鈕移至這裡
-    st.link_button("🗺️ 導航", get_gmap_link("1 Chome-12-17 Hirooka, Kanazawa, Ishikawa 920-0031日本", "walking"))
+    with col_title:
+        st.subheader("🏨 金澤站西口大和Roynet飯店")
+        
+    with col_btn:
+        # 加上一點空白讓按鈕往下對齊文字(視情況)，這裡直接放按鈕
+        st.write("") # 稍微墊高一點點，讓按鈕跟文字中線對齊(可選)
+        st.link_button("🗺️ 導航", get_gmap_link("1 Chome-12-17 Hirooka, Kanazawa, Ishikawa 920-0031日本", "walking"))
     
     with st.container(border=True):
         st.text("Daiwa Roynet Hotel KANAZAWAEKI-NISHIGUCHI")
