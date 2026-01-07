@@ -7,7 +7,7 @@ import day1, day2, day3, day4, day5, day6, day7, day8
 
 # --- 頁面基本設定 ---
 st.set_page_config(
-    page_title="2026 名古屋北陸行",
+    page_title="2026 名古屋",
     page_icon="🇯🇵",
     layout="centered",
     initial_sidebar_state="collapsed"
