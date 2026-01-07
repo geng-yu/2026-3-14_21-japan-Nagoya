@@ -59,7 +59,7 @@ for i, (label, (d, module)) in enumerate(trip_dates.items()):
         break
 
 # --- 介面呈現 ---
-st.title("🇯🇵 2026 名古屋・北陸之旅")
+st.title("🇯🇵 2026 名古屋")
 selected_option = st.selectbox("📅 選擇行程日期", options, index=default_index)
 st.divider()
 
