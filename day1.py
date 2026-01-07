@@ -20,7 +20,7 @@ def show():
     
     # [修正] 時刻表：加入名鐵官網連結與現金提醒
     with st.expander("🚆 點我看：名鐵電車時刻表 (16:00-18:00)", expanded=False):
-        st.markdown("機器買只能用現金，建議搭乘 μ-Sky (+450円)  [官網時刻表](https://trainbus.meitetsu.co.jp/meitetsu-transfer-zh-tw/pc/transfer/DepArrTimeList?snode=00009406&gnode=00004372&date=2026-01-17&depTime=16)")
+        st.markdown("機器買只能用現金，建議搭乘 μ-Sky (+450円)")
         st.markdown("[官網時刻表](https://trainbus.meitetsu.co.jp/meitetsu-transfer-zh-tw/pc/transfer/DepArrTimeList?snode=00009406&gnode=00004372&date=2026-01-17&depTime=16)")
         schedule_data = [
              {"發車": "16:07", "抵達": "16:35", "搭乘時間": "28分", "車種": "μ-Sky"},
