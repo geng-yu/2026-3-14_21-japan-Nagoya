@@ -2,7 +2,7 @@
 import streamlit as st
 from datetime import datetime, date
 
-# 匯入每一天的模組 (確保這些 .py 檔案都在同一個資料夾)
+# 匯入每一天的模組
 import day1, day2, day3, day4, day5, day6, day7, day8
 
 # --- 頁面基本設定 ---
@@ -13,7 +13,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# --- CSS 優化 (包含橫向滑動選單與手機版按鈕) ---
+# --- CSS 優化 (修復置中與深色模式) ---
 st.markdown("""
     <style>
     /* 全域按鈕樣式 */
@@ -21,84 +21,96 @@ st.markdown("""
         width: 100%;
         border-radius: 20px;
         font-weight: bold;
-        border: 1px solid #ddd;
+        border: 1px solid var(--text-color); /* 改用變數，適應深淺色 */
+        opacity: 0.8;
     }
     
     /* 隱藏預設選單與頁尾 */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     
-    /* Day Card 樣式 */
+    /* Day Card 樣式 - 使用變數適應深色模式 */
     .day-card {
-        background-color: #f9f9f9;
+        background-color: var(--secondary-background-color);
         padding: 15px;
         border-radius: 10px;
         margin-bottom: 10px;
-        border: 1px solid #eee;
+        border: 1px solid rgba(128, 128, 128, 0.2);
     }
 
-    /* --- 橫向滑動導覽列 CSS --- */
+    /* --- 橫向滑動導覽列 CSS (核心修改) --- */
     
-    /* 1. 容器設定：橫向排列、可滑動 */
+    /* 1. 容器設定 */
     div[role="radiogroup"] {
         flex-direction: row;
         overflow-x: auto;
         flex-wrap: nowrap !important;
-        gap: 8px; /* 按鈕間距 */
+        gap: 8px;
         padding-bottom: 5px;
         -webkit-overflow-scrolling: touch; 
     }
 
-    /* 2. 隱藏 Radio 的圓圈 */
+    /* 2. 隱藏 Radio 的圓圈 (這是造成偏掉的主因之一，必須徹底隱藏) */
     div[role="radiogroup"] label > div:first-child {
-        display: none;
+        display: none !important;
     }
 
-    /* 3. 按鈕外觀 (未選中) */
+    /* 3. 按鈕外觀 (未選中) - 改用 CSS 變數 */
     div[role="radiogroup"] label {
-        background-color: #f0f2f6;
-        padding: 8px 12px;
-        border-radius: 12px;
-        border: 1px solid #ddd;
+        /* 使用 secondary-background-color (在深色模式是深灰，淺色是淺灰) */
+        background-color: var(--secondary-background-color);
+        color: var(--text-color); /* 文字顏色自動跟隨系統 */
+        
+        padding: 6px 4px; /* 稍微縮小內距 */
+        border-radius: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.2); /* 淡淡的邊框 */
         cursor: pointer;
         transition: all 0.2s;
         
-        /* 關鍵：讓內容可以換行並置中 */
+        /* 絕對置中設定 */
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center; 
         
-        /* 固定最小寬度，讓按鈕看起來整齊 */
-        min-width: 70px; 
-        height: 55px; /* 固定高度確保對齊 */
+        min-width: 68px; /* 固定寬度 */
+        height: 52px;    /* 固定高度 */
     }
 
-    /* 4. 強制文字內容允許換行 (針對 Streamlit 內部結構) */
+    /* 4. 文字內容設定 (修復置中) */
     div[role="radiogroup"] label p {
         font-size: 14px;
-        line-height: 1.2; /* 縮小行距讓兩行更緊湊 */
+        line-height: 1.3;
         font-weight: bold;
-        margin: 0px;
-        white-space: pre-wrap; /* 這是關鍵！允許 \n 換行 */
+        margin: 0px !important; /* 強制移除預設邊距 */
+        padding: 0px !important;
+        width: 100%;
+        white-space: pre-wrap; /* 允許換行 */
+        text-align: center; /* 文字置中 */
     }
 
-    /* 5. 被選中時的樣式 (Streamlit 預設選中會變色，這裡加強邊框) */
+    /* 5. 被選中/滑鼠滑過時的樣式 */
     div[role="radiogroup"] label:hover {
-        border-color: #ff4b4b;
+        border-color: #ff4b4b; /* 紅色邊框 */
+        background-color: var(--background-color); /* 稍微變色 */
+    }
+
+    /* 如果被選中 (利用 Streamlit 內部的 checked 狀態樣式特徵) 
+       注意：Streamlit 選中時會自動改變字體顏色，我們這裡加強邊框 */
+    div[role="radiogroup"] label[data-baseweb="radio"] {
+        border-color: #ff4b4b !important;
+        background-color: var(--background-color) !important;
     }
 
     /* 隱藏捲軸 */
     div[role="radiogroup"]::-webkit-scrollbar {
-        height: 0px;
-        width: 0px;
+        display: none;
     }
 
     </style>
 """, unsafe_allow_html=True)
 
 # --- 日期與資料設定 ---
-# 字典 Key 改成包含換行符號 \n 的格式
 trip_dates = {
     "Day 1\n1/17": (date(2026, 1, 17), day1, "Day 1: 出發 & 移動"),
     "Day 2\n1/18": (date(2026, 1, 18), day2, "Day 2: 金澤市區"),
@@ -112,14 +124,12 @@ trip_dates = {
 
 # --- 自動判斷日期邏輯 ---
 today = datetime.now().date()
-# today = date(2026, 1, 17) # 測試用
 
 default_index = 0
 options = list(trip_dates.keys())
 
-# 迴圈尋找今天的日期
 for i, key in enumerate(options):
-    d = trip_dates[key][0] # 取出日期物件
+    d = trip_dates[key][0]
     if d == today:
         default_index = i
         break
@@ -138,14 +148,10 @@ selected_key = st.radio(
 
 st.divider()
 
-# --- 讀取並顯示內容 ---
-# 從字典中取出對應的資料: (日期物件, 模組, 完整標題)
+# --- 顯示內容 ---
 selected_data = trip_dates[selected_key]
 target_module = selected_data[1]
 full_title = selected_data[2]
 
-# 顯示詳細標題
 st.markdown(f"### {full_title}")
-
-# 執行該 Day 的顯示函式
 target_module.show()
