@@ -49,7 +49,7 @@ def show():
     st.subheader("2️⃣ 轉乘：名鐵巴士中心")
     
     # [修正] 這裡也補上 Highwaybus 連結
-    st.markdown("🔗 [開啟連結：巴士預約確認/付款頁面](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected)")
+    st.markdown("🔗 [巴士預約確認/付款頁面](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected)")
 
     st.markdown("""
     **動線指引：**
@@ -73,11 +73,11 @@ def show():
     
     # [修正] 更新飯店名稱與地址
     with st.container(border=True):
-        st.markdown("**Daiwa Roynet Hotel Kanazawa-Miyabi**")
+        st.markdown("**Daiwa Roynet Hotel KANAZAWAEKI-NISHIGUCHI**")
         st.caption("ダイワロイネットホテル 金沢駅西口")
         st.markdown("---")
         st.text("📍 日：〒920-0031 石川県金沢市広岡1-12-17")
-        st.text("📍 英：1 Chome-12-17 Hirooka, Kanazawa")
+        st.text("📍 英：1-12-17, Hirooka, Kanazawa-shi, Ishikawa 920-0031")
         
         # 導航關鍵字設為日文地址或具體名稱較準確
         st.link_button("🗺️ 帶我去飯店", get_gmap_link("1 Chome-12-17 Hirooka, Kanazawa, Ishikawa 920-0031日本", "walking"))
