@@ -1,7 +1,6 @@
-# 檔案名稱：day1.py
 import streamlit as st
 import pandas as pd
-from utils import get_gmap_link # 匯入剛剛寫好的工具
+from utils import get_gmap_link
 
 def show():
     st.header("✈️ Day 1: 啟程前往金澤")
@@ -16,14 +15,15 @@ def show():
     # --- Step 1: 機場到名古屋 (電車) ---
     st.subheader("1️⃣ 機場 ➔ 名鐵名古屋站")
     
-    # 紅色提醒
-    st.warning("⚠️ **重要提醒：** 抵達名古屋站後，務必於 **巴士發車前 30 分鐘** 至名鐵巴士中心付款取票！")
+    # [修正] 紅色提醒：加入 Highwaybus 連結
+    st.warning("⚠️ **重要提醒：** 抵達名古屋站後，務必於 **巴士發車前 30 分鐘** 至 [名鐵巴士中心](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected) 付款取票！")
     
     st.info("💡 搭乘 **名鐵電車 (Meitetsu Line)** 前往市區")
     
-    # 時刻表 (4欄)
+    # [修正] 時刻表：加入名鐵官網連結與現金提醒
     with st.expander("🚆 點我看：名鐵電車時刻表 (16:00-18:00)", expanded=False):
-        st.caption("建議搭乘 μ-Sky (+450円) 或 特急。")
+        st.markdown("機器買只能用現金，建議搭乘 μ-Sky (+450円)，[名鐵名古屋](https://trainbus.meitetsu.co.jp/meitetsu-transfer-zh-tw/pc/transfer/DepArrTimeList?snode=00009406&gnode=00004372&date=2026-01-17&depTime=16)")
+        
         schedule_data = [
              {"發車": "16:07", "抵達": "16:35", "搭乘時間": "28分", "車種": "μ-Sky"},
              {"發車": "16:17", "抵達": "16:54", "搭乘時間": "37分", "車種": "特急"},
@@ -47,6 +47,10 @@ def show():
 
     # --- Step 2: 轉乘與購物 ---
     st.subheader("2️⃣ 轉乘：名鐵巴士中心")
+    
+    # [修正] 這裡也補上 Highwaybus 連結
+    st.markdown("🔗 [開啟連結：巴士預約確認/付款頁面](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected)")
+
     st.markdown("""
     **動線指引：**
     1. 到達名鐵名古屋站 (B1F)
@@ -67,11 +71,13 @@ def show():
     st.divider()
     st.subheader("🏨 今晚住宿")
     
+    # [修正] 更新飯店名稱與地址
     with st.container(border=True):
-        st.markdown("**金澤大和西口**")
+        st.markdown("**Daiwa Roynet Hotel Kanazawa-Miyabi**")
         st.caption("ダイワロイネットホテル 金沢駅西口")
         st.markdown("---")
         st.text("📍 日：〒920-0031 石川県金沢市広岡1-12-17")
-        st.text("📍 英：1-12-17 Hirooka, Kanazawa, Ishikawa")
+        st.text("📍 英：1 Chome-12-17 Hirooka, Kanazawa")
         
+        # 導航關鍵字設為日文地址或具體名稱較準確
         st.link_button("🗺️ 帶我去飯店", get_gmap_link("Daiwa Roynet Hotel Kanazawa-Miyabi", "walking"))
