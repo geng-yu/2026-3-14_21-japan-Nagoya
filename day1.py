@@ -16,13 +16,13 @@ def show():
     st.subheader("1️⃣ 機場 ➔ 名鐵名古屋站")
     
     # [修正] 紅色提醒：加入 Highwaybus 連結
-    st.warning("⚠️ **重要提醒：** 抵達名古屋站後，務必於 **巴士發車前 30 分鐘** 至 [名鐵巴士中心](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected) 付款取票！")
+    st.warning("⚠️ **重要提醒：** 確認車次後，務必於 **巴士發車前 30 分鐘** 付款取票！[巴士預約付款頁面](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected)")
     
     st.info("💡 搭乘 **名鐵電車 (Meitetsu Line)** 前往市區")
     
     # [修正] 時刻表：加入名鐵官網連結與現金提醒
     with st.expander("🚆 點我看：名鐵電車時刻表 (16:00-18:00)", expanded=False):
-        st.markdown("機器買只能用現金，建議搭乘 μ-Sky (+450円)，[名鐵名古屋](https://trainbus.meitetsu.co.jp/meitetsu-transfer-zh-tw/pc/transfer/DepArrTimeList?snode=00009406&gnode=00004372&date=2026-01-17&depTime=16)")
+        st.markdown("機器買只能用現金，建議搭乘 μ-Sky (+450円)  [官網時刻表](https://trainbus.meitetsu.co.jp/meitetsu-transfer-zh-tw/pc/transfer/DepArrTimeList?snode=00009406&gnode=00004372&date=2026-01-17&depTime=16)")
         
         schedule_data = [
              {"發車": "16:07", "抵達": "16:35", "搭乘時間": "28分", "車種": "μ-Sky"},
@@ -49,7 +49,7 @@ def show():
     st.subheader("2️⃣ 轉乘：名鐵巴士中心")
     
     # [修正] 這裡也補上 Highwaybus 連結
-    st.markdown("🔗 [巴士預約確認/付款頁面](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected)")
+    st.markdown("🔗 [巴士預約付款頁面](https://www.highwaybus.com/gp/reference/refCertification?refCertSelected=selected)")
 
     st.markdown("""
     **動線指引：**
