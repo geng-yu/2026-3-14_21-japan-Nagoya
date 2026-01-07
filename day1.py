@@ -80,4 +80,4 @@ def show():
         st.text("📍 英：1 Chome-12-17 Hirooka, Kanazawa")
         
         # 導航關鍵字設為日文地址或具體名稱較準確
-        st.link_button("🗺️ 帶我去飯店", get_gmap_link("Daiwa Roynet Hotel Kanazawa-Miyabi", "walking"))
+        st.link_button("🗺️ 帶我去飯店", get_gmap_link("ダイワロイネットホテル 金沢駅西口", "walking"))
