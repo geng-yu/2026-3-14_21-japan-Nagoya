@@ -71,12 +71,13 @@ def show():
     st.markdown("#### 🅿️ 停車方案 A (優先：近/室內)")
     st.markdown("**市營神明停車場** (有電梯/室內1F)")
     st.code("電話：0577-32-5388", language="text")
-    st.warning("⚠️ 收現金 (Prepare 1000 yen bills only)")
+    st.warning("⚠️ 收現金 (限1000元鈔)")
     st.link_button("🚗 導航：市營神明停車場", get_gmap_link("Takayama City Municipal Shinmei Parking Lot", "driving"))
 
     st.markdown("#### 🅿️ 停車方案 B (備案：稍遠/室外)")
     st.markdown("**市營空町停車場** (若神明滿了來這)")
     st.code("電話：0577-32-5062", language="text")
+    st.warning("⚠️ 收現金 (限1000元鈔)")
     st.caption("走路到老街約 10 分鐘")
     st.link_button("🚗 導航：市營空町停車場", get_gmap_link("Takayama City Municipal Soramachi Parking Lot", "driving"))
 
