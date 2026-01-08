@@ -16,11 +16,11 @@ def show():
     
     col1, col2 = st.columns(2)
     with col1:
-        st.link_button("🚗 P1. 本町三丁目 (Honchosan)", get_gmap_link("36.14472073037889, 137.25700573910498", "driving"))
-        st.link_button("🚗 P2. 天木屋 (Amakiya)", get_gmap_link("36.14457034860217, 137.2571380595572", "driving"))
+        st.link_button("🅿️ P1. 本町三丁目 (Honchosan)", get_gmap_link("36.14472073037889, 137.25700573910498", "driving"))
+        st.link_button("🅿️ P2. 天木屋 (Amakiya)", get_gmap_link("36.14457034860217, 137.2571380595572", "driving"))
     with col2:
-        st.link_button("🚗 P3. 市營彌生橋", get_gmap_link("36.146588473755976, 137.25774135784505", "driving"))
-        st.link_button("🚗 P4. 松井停車場", get_gmap_link("36.147686767843254, 137.25768119085558", "driving"))
+        st.link_button("🅿️ P3. 市營彌生橋", get_gmap_link("36.146588473755976, 137.25774135784505", "driving"))
+        st.link_button("🅿️ P4. 松井停車場", get_gmap_link("36.147686767843254, 137.25768119085558", "driving"))
 
     with st.expander("🍎 朝市必買必吃"):
         st.markdown("""
@@ -38,16 +38,15 @@ def show():
     st.subheader("2️⃣ 新穗高纜車")
     st.info("💡 **小提醒**：如果風大纜車可能會停駛，出發前建議先看一下官網運行狀況。")
     st.markdown("[新穗高纜車官網](https://shinhotaka-ropeway.jp/zh-TW/)")
-    st.markdown("🅿️ **停車場導航 (依指示前往)**")
     
     st.markdown("**Option 1: 新穗高溫泉停車場**")
-    st.link_button("🚗 導航：新穗高溫泉停車場", get_gmap_link("Shinhodaka Hot Spring Parking Lot", "driving"))
+    st.link_button("🅿️ 導航：新穗高溫泉停車場", get_gmap_link("Shinhodaka Hot Spring Parking Lot", "driving"))
 
     st.markdown("**Option 2: 新穗高第1停車場**")
-    st.link_button("📍 導航：新穗高第1停車場", get_gmap_link("36.286129739124846, 137.5756970360327", "driving"))
+    st.link_button("🅿️ 導航：新穗高第1停車場", get_gmap_link("36.286129739124846, 137.5756970360327", "driving"))
     
     st.markdown("**Option 3: 新穗高第2停車場**")
-    st.link_button("🚗 導航：新穗高第2停車場", get_gmap_link("Shinhotaka No.2 Parking Lot", "driving"))
+    st.link_button("🅿️ 導航：新穗高第2停車場", get_gmap_link("Shinhotaka No.2 Parking Lot", "driving"))
 
     
 
