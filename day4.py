@@ -12,7 +12,7 @@ def show():
     st.markdown("🅿️ **停車場選擇 (依照優先順序)**")
     
     # 停車場列表
-    st.markdown("由於市區停車場可能客滿，這裡有四個備選：")
+    st.markdown("停車場可能客滿，有四個選擇")
     
     col1, col2 = st.columns(2)
     with col1:
@@ -86,7 +86,6 @@ def show():
     # 5. 返回飯店
     # ==========================================
     st.subheader("5️⃣ FAV HOTEL 飛驒高山")
-    st.markdown("返回飯店休息。")
 
     st.markdown("**Step 1：車機導航設定**")
     st.code("電話：0577-32-8885", language="text")
