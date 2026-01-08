@@ -46,7 +46,11 @@ def show():
     
     st.markdown("**Option 3: 新穗高第2停車場**")
     st.link_button("🅿️ 導航：新穗高第2停車場", get_gmap_link("Shinhotaka No.2 Parking Lot", "driving"))
-
+    with st.expander("🍎 新穗高必買必吃"):
+        st.markdown("""
+        * **雪廊 (Snow Corridor)** : 霜淇淋、熱可可
+        * **阿爾卑斯麵包房(第2站白樺平站)** : 牛角麵包
+        """)
     
 
     st.divider()
