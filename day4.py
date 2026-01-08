@@ -41,7 +41,7 @@ def show():
     st.markdown("🅿️ **停車場導航 (依指示前往)**")
     
     st.markdown("**Option 1: 新穗高溫泉停車場 (山腳站)**")
-    st.link_button("🚗 導航："新穗高溫泉停車場", get_gmap_link("Shinhodaka Hot Spring Parking Lot", "driving"))
+    st.link_button("🚗 導航：新穗高溫泉停車場", get_gmap_link("Shinhodaka Hot Spring Parking Lot", "driving"))
 
     st.markdown("**Option 2: 鍋平高原 (第2纜車站附近)**")
     st.link_button("📍 導航：新穗高第1駐車場", get_gmap_link("36.286129739124846, 137.5756970360327", "driving"))
