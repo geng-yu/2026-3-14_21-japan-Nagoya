@@ -68,7 +68,7 @@ def show():
     st.caption("下車後需步行約 5 分鐘進入巷弄")
     st.link_button("📍 導航：東茶屋街", get_gmap_link("Higashi Chaya District", "walking"))
 
-    with st.expander("🍘 美食"):
+    with st.expander("🍘 東茶屋街美食"):
         st.markdown("""
         * **金箔冰淇淋**：(箔一 Hakuichi)
         * **可樂餅**：長條形可樂餅 (Ville de Croquette)
@@ -133,7 +133,7 @@ def show():
         * **游泳池**：內部需預約(當天早上9:00搶)，上方免費
         * **Blue Planet Sky**：「光之庭」，仰望方形天空
         """)
-    with st.expander("🍘 美食"):
+    with st.expander("🍘 美術館美食"):
         st.markdown("""
         * **Patisserie OFUKU (パティスリー オフク)**：水果塔和蛋糕(下午茶)
         """)
@@ -143,7 +143,7 @@ def show():
     # ==========================================
     # 6. 金澤 FORUS (晚餐/逛街)
     # ==========================================
-    st.subheader("6️⃣ 金澤 FORUS (晚餐/寶可夢)")
+    st.subheader("6️⃣ 金澤 FORUS")
 
     st.markdown("**Step 1：前往搭車點 (走路)**")
     st.link_button("🚶 導航：廣坂‧21世紀美術館 (公車站)", get_gmap_link("36.56168309662548, 136.6583946033682", "walking"))
@@ -157,9 +157,12 @@ def show():
     st.markdown("**Step 3：抵達目的地**")
     st.markdown("FORUS 百貨就在金澤站東口左手邊。")
     st.link_button("📍 導航：金澤 FORUS", get_gmap_link("Kanazawa FORUS", "walking"))
-    
+    with st.expander("🍘 FORUS美食"):
+        st.markdown("""
+        * **迴轉壽司6F**：もりもり寿し、プロムナード(能登前)
+        * **木桶飯6F**：Shiroku (四六時中)
+        """)
     st.success("🛍️ **逛街重點 (FORUS)**：\n* **4F**：Uniqlo (免稅)\n* **5F**：寶可夢中心 (Pokemon Center Kanazawa) - 門口有「美納斯」雕像。")
-    st.link_button("⚡ 導航：寶可夢中心 (5F)", get_gmap_link("Pokemon Center Kanazawa", "walking"))
 
 if __name__ == "__main__":
     show()
