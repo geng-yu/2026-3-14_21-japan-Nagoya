@@ -43,7 +43,7 @@ def show():
     st.caption("目的地：村營 Seseragi 公園停車場")
 
     st.markdown("**Step 2：手機導航**")
-    st.link_button("🚗 導航：村營 Seseragi 停車場", get_gmap_link("Shirakawa-go Seseragi Park Parking", "driving"))
+    st.link_button("🅿️ 導航：村營 Seseragi 停車場", get_gmap_link("Shirakawa-go Seseragi Park Parking", "driving"))
 
     st.markdown("""
     **Step 3：怎麼玩？**
