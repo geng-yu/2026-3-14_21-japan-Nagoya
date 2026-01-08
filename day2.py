@@ -127,13 +127,17 @@ def show():
 
     st.markdown("**Step 3：抵達目的地**")
     st.link_button("📍 導航：金澤21世紀美術館", get_gmap_link("21st Century Museum of Contemporary Art, Kanazawa", "walking"))
-
+    st.markdown("[泳池內部預約](https://airwait.jp/WCSP/storeDetail?storeNo=AKR5190068676&langType=KeyTW)")
     with st.expander("🎨 美術館亮點"):
         st.markdown("""
         * **游泳池**：內部需預約(當天早上9:00搶)，上方免費
         * **Blue Planet Sky**：「光之庭」，仰望方形天空
         """)
-
+    with st.expander("🍘 美食"):
+        st.markdown("""
+        * **Patisserie OFUKU (パティスリー オフク)**：水果塔和蛋糕(下午茶)
+        """)
+        
     st.divider()
 
     # ==========================================
