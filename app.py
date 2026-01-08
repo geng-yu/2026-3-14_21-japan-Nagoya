@@ -144,7 +144,7 @@ for i, key in enumerate(options):
 
 # --- 介面呈現 ---
 st.title("🇯🇵 2026 名古屋")
-
+st.caption("1/17~24")
 # 橫向按鈕選單
 selected_key = st.radio(
     "選擇行程日期",
