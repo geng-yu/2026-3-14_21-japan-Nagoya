@@ -68,7 +68,10 @@ def show():
 
     st.markdown("**Step 1：步行導航**")
     st.link_button("🏨 導航：Hotel Forza Nagoya Sakae", get_gmap_link("Hotel Forza Nagoya Sakae", "walking"))
-
+    with st.expander("🍽️ 小吃"):
+        st.markdown("""
+        * **世界的山將** : 夢幻手羽先 (炸雞翅)
+        """)
     st.divider()
 
     # ==========================================
