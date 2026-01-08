@@ -7,16 +7,15 @@ def show():
     # 1. 牧歌之里 (玩雪 & 午餐)
     # ==========================================
     st.subheader("1️⃣ 牧歌之里")
-    st.markdown("**Step 1：車機導航設定**")
+    st.markdown("**Step 1：車機導航**")
     st.code("電話：0575-73-2888", language="text")
     st.markdown("**Step 2：手機導航**")
     st.link_button("⛄ 導航：牧歌之里", get_gmap_link("Bokka no Sato", "driving"))
 
-    with st.expander("🍽️ 點我看：午餐與特色"):
+    with st.expander("🍽️ 餐點"):
         st.markdown("""
         * **午餐**：園區內餐廳提供飛驒牛料理、蛋包飯。
         * **必吃**：牧場自家製霜淇淋、牛奶布丁 (非常濃郁)。
-        * **活動**：雪上香蕉船、與動物近距離接觸。
         """)
 
     st.divider()
@@ -25,9 +24,9 @@ def show():
     # 2. 犬山城 (國寶名城)
     # ==========================================
     st.subheader("2️⃣ 犬山城")
-    st.warning("⚠️ **注意時間**：16:30 最後入場，17:00 關門。")
+    st.warning("⚠️ **時間**：16:30 最後入場，17:00 關門")
 
-    st.markdown("**Step 1：車機導航設定**")
+    st.markdown("**Step 1：車機導航**")
     st.caption("目的地：犬山城第1停車場")
     st.code("MapCode：70 157 836*35\n電話：0568-61-1711", language="text")
 
@@ -40,9 +39,9 @@ def show():
     # 3. 還車 (TOYOTA 白川店)
     # ==========================================
     st.subheader("3️⃣ 名古屋白川店還車")
-    st.markdown("記得在附近加滿油再還車")
+    st.markdown("記得附近加滿油再還車")
     
-    st.markdown("**Step 1：車機導航設定**")
+    st.markdown("**Step 1：車機導航**")
     st.caption("TOYOTA租車 名古屋白川店")
     st.code("電話：052-204-0100\nMapCode：428 849 4*83", language="text")
 
@@ -68,16 +67,15 @@ def show():
     # 5. 晚餐 (味噌豬排)
     # ==========================================
     st.subheader("5️⃣ 晚餐：黑豚屋 (Kurobutaya)")
-    st.markdown("名古屋必吃美食：味噌豬排 (Miso Katsu)。")
+    st.markdown("名古屋必吃美食：味噌豬排")
 
     st.markdown("**Step 1：步行導航**")
-    st.caption("從飯店步行前往")
     st.link_button("🐷 導航：名古屋味噌豬排黑豚屋", get_gmap_link("Kurobutaya Ramuchii Nagoya", "walking"))
 
-    with st.expander("🥢 點我看：推薦菜單"):
+    with st.expander("🥢 推薦菜單"):
         st.markdown("""
-        * **味噌炸豬排定食**：濃郁的紅味噌醬汁淋在酥脆豬排上。
-        * **蔥花味噌豬排**：加上大量蔥花，口感更清爽。
+        * **味噌炸豬排定食**：濃郁的紅味噌醬汁淋在酥脆豬排上
+        * **蔥花味噌豬排**：加上大量蔥花，口感更清爽
         """)
 
 if __name__ == "__main__":
