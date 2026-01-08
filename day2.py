@@ -40,10 +40,11 @@ def show():
 
     with st.expander("😋 近江町小吃"):
         st.markdown("""
-        * **近江町可樂餅**：現炸酥脆，推薦甜蝦或咖哩口味。
-        * **酒井水果店**：當季現切水果串 (草莓/哈密瓜)，多汁解膩。
-        * **豆腐家**：濃郁豆漿霜淇淋、豆乳甜甜圈。
-        * **金澤關東煮 (Ippuku)**：品嚐金澤特色「車麩」(麵筋)。
+        * **可樂餅**：甜蝦或螃蟹奶油口味
+        * **海鮮**：大口 或 忠村 水產
+        * **豆腐家**：豆漿霜淇淋、豆乳甜甜圈
+        * **金澤關東煮(轉角)**：車麩(輪狀麵筋)、梅貝
+        * **伴手禮**：乾貨、高湯包
         """)
 
     st.divider()
@@ -67,11 +68,12 @@ def show():
     st.caption("下車後需步行約 5 分鐘進入巷弄")
     st.link_button("📍 導航：東茶屋街", get_gmap_link("Higashi Chaya District", "walking"))
 
-    with st.expander("🍘 東茶屋街精緻美食"):
+    with st.expander("🍘 美食"):
         st.markdown("""
-        * **Ville de Croquette**：網美級法式可樂餅，口味獨特(如白醬雞肉)。
-        * **中田屋 (Nakata)**：名產「金鍔」(Kintsuba)，薄皮紅豆甜點。
-        * **Fuwari**：口感蓬鬆的日式鬆餅。
+        * **金箔冰淇淋**：(箔一 Hakuichi)
+        * **可樂餅**：長條形可樂餅 (Ville de Croquette)
+        * **水果大福**：(菓舗 Kazu Nakashima) 
+        * **伴手禮**：金箔保養品/吸油面紙 (箔座)(箔一)
         """)
 
     st.divider()
@@ -102,9 +104,8 @@ def show():
         """)
     with st.expander("🍡 兼六園周邊點心"):
         st.markdown("""
-        * **見城亭**：位於桂坂口旁，風景極佳，有精緻甜點盤
-        * **納豆餅**：園內茶屋偶爾販售的傳統烤麻糬
-        * **箔一 (Hakuichi)**：整片金箔貼上的奢華霜淇淋
+        * **見城亭**：醬油糰子、納豆餅、金箔紅豆湯
+        * **箔一 (Hakuichi)**：金箔冰淇淋
         """)
 
     st.divider()
