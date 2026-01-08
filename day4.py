@@ -16,11 +16,11 @@ def show():
     
     col1, col2 = st.columns(2)
     with col1:
-        st.link_button("🚗 P1. 本町三丁目 (Honchosan)", get_gmap_link("Honchosan Parking Lot", "driving"))
-        st.link_button("🚗 P2. 天木屋 (Amakiya)", get_gmap_link("Amakiya Parking Lot", "driving"))
+        st.link_button("🚗 P1. 本町三丁目 (Honchosan)", get_gmap_link("36.14472073037889, 137.25700573910498", "driving"))
+        st.link_button("🚗 P2. 天木屋 (Amakiya)", get_gmap_link("36.14457034860217, 137.2571380595572", "driving"))
     with col2:
-        st.link_button("🚗 P3. 市營彌生橋", get_gmap_link("Takayama City Municipal Yayoibashi Parking Lot", "driving"))
-        st.link_button("🚗 P4. 松井停車場", get_gmap_link("Matsui Parking Lot Takayama", "driving"))
+        st.link_button("🚗 P3. 市營彌生橋", get_gmap_link("36.146588473755976, 137.25774135784505", "driving"))
+        st.link_button("🚗 P4. 松井停車場", get_gmap_link("36.147686767843254, 137.25768119085558", "driving"))
 
     with st.expander("🍎 點我看：朝市必買必吃"):
         st.markdown("""
