@@ -66,7 +66,7 @@ def show():
     # 時刻表 (摺疊區塊)
     # ==========================================
     with st.expander("🚄 金山站 -> 機場時刻表"):
-        st.markdown("[🔗 官網時刻表](https://trainbus.meitetsu.co.jp/meitetsu-transfer-zh-tw/pc/transfer/DepArrTimeList?snode=00009406&gnode=00004372&date=2026-01-17&depTime=16)")
+        st.markdown("[🔗 官網時刻表](https://trainbus.meitetsu.co.jp/meitetsu-transfer-zh-tw/pc/transfer/DepArrTimeList?snode=00001879&gnode=00009406&date=2026-01-24&depTime=12)")
         
         schedule_data = [
             {"出發": "12:05", "到達": "12:36", "耗時": "31分", "車種": "🔴 特急 (部分指定)"},
