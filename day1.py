@@ -79,3 +79,7 @@ def show():
         st.text("ダイワロイネットホテル 金沢駅西口")
         st.text("📍 日：〒920-0031 石川県金沢市広岡1-12-17")
         st.text("📍 英：1-12-17, Hirooka, Kanazawa-shi, Ishikawa 920-0031")
+
+
+    # 在 show() 函式的最後面加入：
+    show_food_table("金澤")
