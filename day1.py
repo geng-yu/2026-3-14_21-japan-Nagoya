@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from utils import get_gmap_link
-from utils import show_food_table
+from utils import get_gmap_link, show_food_table
+
 def show():
     
     
