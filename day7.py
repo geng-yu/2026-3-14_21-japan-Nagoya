@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import get_gmap_link
+from utils import get_gmap_link, show_food_table
 
 def show():
     # ==========================================
