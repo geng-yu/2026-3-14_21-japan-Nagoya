@@ -82,25 +82,3 @@ def show_food_table(region):
             disabled=True,
             use_container_width=True
         )
-第二步：修正 day1.py (檢查匯入位置)
-非常重要：from utils import show_food_table 必須放在檔案的最上面（第 1 或第 2 行），不能放在 def show(): 裡面，也不能放在 if __name__... 裡面。
-
-請確認您的 day1.py 長得像這樣：
-
-Python
-
-import streamlit as st
-# 👇 這一行一定要加在最上面，跟其他 import 放在一起
-from utils import get_gmap_link, show_food_table 
-
-def show():
-    st.header("...")
-    # ... (原本的中間內容) ...
-    
-    st.divider()
-    
-    # 👇 這一行加在 show() 函式的最後面，縮排要對齊
-    show_food_table("金澤")
-
-if __name__ == "__main__":
-    show()
