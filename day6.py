@@ -60,7 +60,7 @@ def show():
     with st.expander("⚡ PARCO 樓層"):
         st.markdown("""
         * **東館2F**: **寶可夢中心**
-        * **【西館】**
+        * **-西館-**
         * **B1F**: 無印良品 (MUJI)
         * **1F**: **HARBS** (千層蛋糕)
         * **6F**: ABC-MART
