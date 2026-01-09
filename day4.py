@@ -114,7 +114,7 @@ def show():
     # ==========================================
     # 5. 返回飯店
     # ==========================================
-    st.subheader("5️⃣ FAV HOTEL 飛驒高山")
+    st.subheader("6️⃣ FAV HOTEL 飛驒高山")
 
     st.markdown("**Step 1：車機導航**")
     st.code("電話：0577-32-8885", language="text")
