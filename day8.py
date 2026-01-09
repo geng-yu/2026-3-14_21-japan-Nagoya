@@ -3,6 +3,11 @@ import pandas as pd
 from utils import get_gmap_link
 
 def show():
+    with st.container(border=True):
+        st.subheader("🛫 國泰航空 CX531")
+        st.markdown("""
+        * 16:40 NGO 起飛 → 19:15 TPE 抵達
+        """)
 
     # ==========================================
     # 1. 早餐：麥當勞
