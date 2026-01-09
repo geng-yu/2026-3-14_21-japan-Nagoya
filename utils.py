@@ -1,4 +1,3 @@
-# 檔案名稱：utils.py
 import streamlit as st
 import pandas as pd
 
@@ -15,7 +14,7 @@ def show_food_table(region):
     """
     
     # ==========================================
-    # 1. 在這裡編輯您的店家資料
+    # 1. 在這裡編輯您的店家資料 (完全保留您的內容)
     # ==========================================
     data_source = {
         "金澤": [
@@ -81,6 +80,11 @@ def show_food_table(region):
     # 重新排列欄位順序
     df = df[["店名", "導航", "時間", "備註"]]
 
+    # 計算表格高度 (讓它自動長高，不用卷軸)
+    # 標題列(約35px) + 每一列(約35px) + 緩衝(3px)
+    # 有些內容會換行，所以稍微增加高度係數
+    table_height = (len(df) + 1) * 38 + 3
+
     # 顯示摺疊表格
     with st.expander(f"🍽️ 點我看：{region} 美食店家清單", expanded=False):
         st.data_editor(
@@ -94,10 +98,11 @@ def show_food_table(region):
                     validate="^https://.*",
                     width="small"
                 ),
-                "時間": st.column_config.TextColumn("時間", width="small"),
+                "時間": st.column_config.TextColumn("時間", width="medium"),
                 "備註": st.column_config.TextColumn("備註", width="large"),
             },
             hide_index=True,
             disabled=True,
-            use_container_width=True
+            use_container_width=True,
+            height=table_height # 自動調整高度
         )
