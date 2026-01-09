@@ -87,6 +87,7 @@ def show():
     * **南館3F**:領折價券(5%)、**退稅櫃台** 
     * **南館4F-6F**: Yodobashi電器
     """)
-
+    st.divider()
+    show_food_table("榮商圈")
 if __name__ == "__main__":
     show()
