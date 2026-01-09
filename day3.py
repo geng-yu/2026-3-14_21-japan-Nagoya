@@ -127,7 +127,7 @@ def show():
         st.markdown("""
         * **🥩 壽喜燒** : 寿々や (Suzuya)
         """)
-    
-
+    st.divider()
+    show_food_table("飛驒高山")
 if __name__ == "__main__":
     show()
