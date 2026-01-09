@@ -23,11 +23,8 @@ def show():
     # ==========================================
     st.subheader("2️⃣ 馬喰一代 名古屋榮")
     
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.warning("⏰ **預約時間：11:30**")
-    with col2:
-        st.link_button("🥩 導航：馬喰一代", get_gmap_link("Bakuroichidai Nagoya Sakae", "walking"))
+    st.warning("⏰ **預約時間：11:30**")
+    st.link_button("🥩 導航：馬喰一代", get_gmap_link("Bakuroichidai Nagoya Sakae", "walking"))
 
     st.divider()
 
