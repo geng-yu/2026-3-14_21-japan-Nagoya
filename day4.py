@@ -121,6 +121,7 @@ def show():
 
     st.markdown("**Step 2：手機導航**")
     st.link_button("🏨 導航：FAV HOTEL 飛驒高山", get_gmap_link("FAV HOTEL HIDA TAKAYAMA", "driving"))
+    st.link_button("🅿️ 導航：第二停車場", get_gmap_link("Paraca Takayama Ekimae #2", "driving"))
     st.divider()
     show_food_table("飛驒高山")
 if __name__ == "__main__":
