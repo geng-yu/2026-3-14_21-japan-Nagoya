@@ -4,7 +4,7 @@ from utils import get_gmap_link, show_food_table
 
 def show():
     
-    
+    st.caption("1/17~24")
     # --- 飛機 ---
     with st.container(border=True):
         st.markdown("### 🛫 國泰航空 CX530")
