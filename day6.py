@@ -47,7 +47,7 @@ def show():
     # 4. Onitsuka Tiger
     # ==========================================
     st.subheader("4️⃣ Onitsuka Tiger (鬼塚虎)")
-    st.link_button("👟 導航：Onitsuka Tiger 榮", get_gmap_link("Onitsuka Tiger Nagoya", "walking"))
+    st.link_button("👟 導航：Onitsuka Tiger 榮", get_gmap_link("35.16808746735021, 136.90680124428417", "walking"))
     st.divider()
 
     # ==========================================
