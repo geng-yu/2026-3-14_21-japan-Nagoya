@@ -89,7 +89,7 @@ def show():
     
     st.markdown("**Step 1：前往搭車點 (走路)**")
     st.caption("從東茶屋街走回原本下車處附近的站牌")
-    st.link_button("🚶 導航：橋場町 (派出所前公車站)", get_gmap_link("1-chōme-1-1 Higashiyama, Kanazawa, Ishikawa 920-0831日本", "walking"))
+    st.link_button("🚶 導航：橋場町 (派出所前公車站)", get_gmap_link("36.5723822372095, 136.66479096516986", "walking"))
 
     st.markdown("""
     **Step 2：確認公車班次**
