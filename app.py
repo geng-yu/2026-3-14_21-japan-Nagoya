@@ -160,7 +160,7 @@ st.markdown("""
 [愛電王](https://osaka.letsgojp.com/coupon/389838/) ｜
 """)
 st.markdown("""
-💊[松本清](https://d1grca2t3zpuug.cloudfront.net/2025/01/20250131matsucoupontw-1631x2475.webp) ｜ 
+💊 [松本清](https://d1grca2t3zpuug.cloudfront.net/2025/01/20250131matsucoupontw-1631x2475.webp) ｜ 
 [大國藥局](https://d1grca2t3zpuug.cloudfront.net/2023/08/daikokucoupon-1751874722.webp) ｜ 
 [唐吉訶德](https://japanportal.donki-global.com/coupon/?ptcd=0015000103) ｜
 [Cocokarafine](https://d1grca2t3zpuug.cloudfront.net/2025/01/20250131matsucoupontw-1631x2475.webp) ｜
