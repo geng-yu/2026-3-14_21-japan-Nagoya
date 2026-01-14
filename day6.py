@@ -15,9 +15,9 @@ def show():
     # 1. 唐吉訶德
     # ==========================================
     st.subheader("1️⃣ 唐吉訶德")
-    st.link_button("🐧 導航：唐吉訶德 榮本店 24H", get_gmap_link("Don Quijote Sakae", "walking"))
+    st.link_button("🐧 導航：唐吉訶德 榮本店(24H)", get_gmap_link("Don Quijote Sakae", "walking"))
     st.markdown("[折價券(滿10,000日元)](https://www.donki-global.com/zhtw/index.php)")
-    st.link_button("🐧 導航：唐吉訶德 三丁目 9~1點", get_gmap_link("35.164734463771936, 136.90703797431874", "walking"))
+    st.link_button("🐧 導航：唐吉訶德 三丁目(9:00~1:00)", get_gmap_link("35.164734463771936, 136.90703797431874", "walking"))
     st.divider()
 
     # ==========================================
