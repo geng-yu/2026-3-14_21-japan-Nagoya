@@ -2,7 +2,7 @@ import streamlit as st
 from utils import get_gmap_link, show_food_table
 
 def show():
-    st.caption("1/20")
+    st.caption("3/17")
     # ==========================================
     # 1. 宮川朝市 (08:30)
     # ==========================================
